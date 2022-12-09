@@ -120,6 +120,7 @@ footer{
     outline: 2px dashed var(--font-color-white);
     min-height: 100%;
     padding: 2rem;
+    transition: all 0.5s ease-in-out;
 }
 
 .font-color-white{
@@ -132,6 +133,7 @@ footer{
     padding: 0.5rem 1rem;
     border: 1px solid var(--font-color-white);
     border-radius: var(--border-radius);
+    transition: all 0.5s ease-in-out;
 }
 
 .code-block {
@@ -154,4 +156,40 @@ footer{
         flex: 0 0 33.33%;
         max-width: 33.33%;
     }
+}
+
+@media screen and (max-width: 992px) {
+    header{
+        width: 75%;
+    }
+
+    .card-column{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        width: 75%;
+    }
+
+    .card-column{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.card-column:hover,
+.card:hover .card-header{
+    box-shadow: inset 0px 0px 8px var(--font-color-pink), 0 0 15px var(--font-color-pink);
+}
+
+.code-block:active{
+    user-select: all;
+}
+
+::selection{
+    background-color: var(--font-color-white);
+    color: black;
 }
